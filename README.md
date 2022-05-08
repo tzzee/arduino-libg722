@@ -1,4 +1,4 @@
-# libg722
+# arduino-libg722
 
 ## Introduction
 
@@ -22,6 +22,19 @@ Steve Underwood <steveu@coppice.org> improved the code a lot later on and
 contributed it into several popular open source projects.
 
 Librarized by Sippy Software, Inc.
+
+## Arduino Library
+
+You can download the library as zip and call include Library -> zip library. Or you can __git clone__ this project into the Arduino libraries folder e.g. with
+
+```
+cd  ~/Documents/Arduino/libraries
+git clone pschatzmann/arduino-libg722
+```
+
+The use of git is recommended because you can easily update to the latest version just by executing the git pull command in the project folder.
+
+
 
 ## License
 
