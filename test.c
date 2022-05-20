@@ -24,6 +24,7 @@
  * SUCH DAMAGE.
  *
  */
+#ifndef ARDUINO
 
 #include <sys/endian.h>
 #include <getopt.h>
@@ -146,3 +147,5 @@ main(int argc, char **argv)
 
     exit(0);
 }
+
+#endif
