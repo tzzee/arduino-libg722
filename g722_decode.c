@@ -30,7 +30,9 @@
 
 #include <stdio.h>
 #include <inttypes.h>
+#ifndef ARDUINO
 #include <memory.h>
+#endif
 #include <stdlib.h>
 
 #include "g722.h"
