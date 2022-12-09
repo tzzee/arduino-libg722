@@ -33,6 +33,9 @@
 #ifndef ARDUINO
 #include <memory.h>
 #endif
+#ifdef ESP_PLATFORM
+#include <esp_heap_caps.h>
+#endif
 #include <stdlib.h>
 
 #include "g722.h"
@@ -155,7 +158,7 @@ G722_DEC_CTX *g722_decoder_new(int rate, int options)
 {
     G722_DEC_CTX *s;
 
-    if ((s = (G722_DEC_CTX *) malloc(sizeof(*s))) == NULL)
+    if ((s = (G722_DEC_CTX *) heap_caps_malloc(sizeof(*s), MALLOC_CAP_DEFAULT)) == NULL)
         return NULL;
     memset(s, 0, sizeof(*s));
     if (rate == 48000)
